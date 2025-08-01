@@ -16,7 +16,26 @@
         ></textarea>
         <div class="counter" id="counter">
             Words: <span id="wordCount">0</span> | Next reset: <span id="countdown">5</span> words
+       <!-- Fancy Save Button -->
+        <div class="save-container">
+            <button class="fancy-save-btn" id="saveBtn">
+                <span class="save-icon"></span>
+                Save your note!
+            </button>
         </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="saveModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-text">
+                Slow, stupid and useless<br>
+                (oops! not your man)<br>
+                but this notepad is! 😅
+            </div>
+            <button class="close-btn" id="closeModal">Got it! 😂</button>
+        </div>
+    </div>
     </div>
     <script src="script.js"></script>
 </body>

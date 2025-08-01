@@ -1,18 +1,30 @@
 const notepad = document.getElementById('notepad');
 const wordCountSpan = document.getElementById('wordCount');
 const countdownSpan = document.getElementById('countdown');
+const saveBtn = document.getElementById('saveBtn');
+const modal = document.getElementById('saveModal');
+const closeModal = document.getElementById('closeModal');
 
 // Initialize audio with error handling
 const vanishSound = new Audio('vanish.mp3');
 vanishSound.volume = 0.5; // Adjust volume (0.0 to 1.0)
 
+// Initialize maanchild audio
+const maanchildSound = new Audio('manchildmain.mp3');
+maanchildSound.volume = 0.7; // Slightly louder for dramatic effect
+
 // Handle audio loading errors
 vanishSound.addEventListener('error', () => {
-    console.log('Could not load vanish.mp4 - sound effects disabled');
+    console.log('Could not load vanish.mp3 - sound effects disabled');
+});
+
+maanchildSound.addEventListener('error', () => {
+    console.log('Could not load maanchild.mp3 - sound effects disabled');
 });
 
 // Preload the audio for better performance
 vanishSound.preload = 'auto';
+maanchildSound.preload = 'auto';
 
 function updateWordCount() {
     const text = notepad.value.trim();
@@ -70,6 +82,30 @@ function updateWordCount() {
         }, 4000);
     }
 }
+
+// Save button functionality
+saveBtn.addEventListener('click', () => {
+    // Play maanchild sound
+    maanchildSound.currentTime = 0;
+    maanchildSound.play().catch(error => {
+        console.log('Maanchild audio play failed:', error);
+    });
+    
+    // Show modal
+    modal.style.display = 'block';
+});
+
+// Close modal functionality
+closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Close modal when clicking outside
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
 
 // Listen for typing
 notepad.addEventListener('input', updateWordCount);
