@@ -38,10 +38,11 @@ For Software:
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1]<img width="1176" height="770" alt="Screenshot 2025-08-02 050807" src="https://github.com/user-attachments/assets/044bd062-f90d-41e3-88ba-d3d4722c3ee7" />
+![Screenshot1]<img width="1461" height="852" alt="Screenshot 2025-08-02 074633" src="https://github.com/user-attachments/assets/6504137c-63e6-450d-8173-494b5327580b" />
 
 
-![Screenshot2]<img width="1176" height="770" alt="Screenshot 2025-08-02 050807" src="https://github.com/user-attachments/assets/26b183d7-f0e7-45b9-9aca-2f0a03e79dbe" />
+![Screenshot2] <img width="1306" height="842" alt="Screenshot 2025-08-02 074657" src="https://github.com/user-attachments/assets/714be059-0450-4a93-8757-4e997dd63ef9" />
+
 
 *Add caption explaining what this shows*
 
